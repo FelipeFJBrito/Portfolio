@@ -94,6 +94,7 @@
     font-size: 1.2rem;
     background-color: var(--darker-gray);
     border: 2px solid var(--white);
+    cursor: pointer;
 }
 
 .highl-btn-a{
@@ -106,6 +107,7 @@
     background-color: var(--medium-blue);
     border: 2px solid var(--white);
     text-decoration: none;
+    cursor: pointer;
 }
 .primary-btn-a:hover{
     border: 2px solid var(--medium-blue);

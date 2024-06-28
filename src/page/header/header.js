@@ -11,7 +11,6 @@ const Header = ({ contactRef }) => {
         deleteSpeed: 40,
     });
 
-    const buttonResumeRefH = useRef(null);
     const buttonHireMeRef = useRef(null);
 
     const scrollToContact = () => {
@@ -20,38 +19,19 @@ const Header = ({ contactRef }) => {
         }
     }
 
-    const downloadFileAtURLH = (url) => {
-        const fileName = url.split('/').pop();
-        const aTag = document.createElement('a');
-        aTag.href = url;
-        aTag.setAttribute('download', fileName);
-        document.body.appendChild(aTag);
-        aTag.click();
-        document.body.removeChild(aTag);
-    }
-
     useEffect(() => {
-        const buttonResumeH = buttonResumeRefH.current;
         const buttonHireMe = buttonHireMeRef.current;
-        const url = '/Felipe-Brito-Resume.pdf';
 
         if (buttonHireMe) {
             buttonHireMe.addEventListener('click', scrollToContact);
         }
-        if (buttonResumeH) {
-            const handleResumeClick = () => downloadFileAtURLH(url);
-            buttonResumeH.addEventListener('click', handleResumeClick);
 
-            // Clean up the event listeners
-            return () => {
-                if (buttonHireMe) {
-                    buttonHireMe.removeEventListener('click', scrollToContact);
-                }
-                if (buttonResumeH) {
-                    buttonResumeH.removeEventListener('click', handleResumeClick);
-                }
-            };
-        }
+        // Clean up the event listener
+        return () => {
+            if (buttonHireMe) {
+                buttonHireMe.removeEventListener('click', scrollToContact);
+            }
+        };
     }, [contactRef]);
 
     return (
@@ -80,9 +60,10 @@ const Header = ({ contactRef }) => {
                 <button ref={buttonHireMeRef} className="btn primary-btn">
                     Hire Me
                 </button>
-                <button ref={buttonResumeRefH} className="btn highl-btn">
+                <a href="https://drive.google.com/file/d/1ZWIZVcckTNHf0usRQKR_p4IhV0ycXpC8/view?usp=sharing" className="btn highl-btn" target="_blank" rel="noopener noreferrer">
                     Get Resume
-                </button>
+                </a>
+                {/* The "Get Resume" functionality has been removed */}
             </div>
             <div className="fav">
                 <div className="fav-icon">
