@@ -1,0 +1,18 @@
+
+.footer-container{
+    background: var(--dark-gray);
+    height: 20vh;
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--white);
+}
+.footer-container p{
+    margin-bottom: 20px;
+}
+.footer-container span{
+    margin-top: 10px;
+}

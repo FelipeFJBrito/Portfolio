@@ -1,0 +1,87 @@
+.workHistory-content{
+    margin: 10px 0px 30px 0px;
+}
+
+.workHistory-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.company{
+    color: var(--medium-blue);
+    font-weight: bolder;
+    margin-top: 2px;
+}
+
+.workHistory-header h3{
+    padding: 8px;
+    width: 79px;
+    color: var(--white);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    background-color: var(--medium-blue);
+    border: 2px solid var(--white);
+    margin-right: 2%;
+}
+
+.workHistory-header .date{
+    width: 100px;
+}
+
+@media ( max-width: 700px){
+
+    .workHistory-header .date{
+        width: 90px;
+    }
+    .workHistory-header h3{
+        height: 30px;
+        width: 50px;
+        font-size: 0.8rem;
+        padding: 5px;
+        margin-right: 1px;
+    }
+
+    .workHistory-header h2{
+        width: 200px;
+        font-size: 1.2rem;
+        font-weight: 800;
+        
+    }
+
+    .workHistory-content p{
+        font-size: 0.9rem;
+        font-weight: 650;
+        margin-top: 2%;
+    }
+    
+}
+
+@media (max-width: 450px){
+    .workHistory-header .date{
+        width: 90px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    .workHistory-header h3{
+        height: 10px;
+        width: 55px;
+        font-size: 0.6rem;
+        margin-right: 6px;
+        margin-top: 5px;
+    }
+
+    .workHistory-header h2{
+        width: 50px;
+        font-size: 1.2rem;
+        font-weight: 800;
+        
+    }
+
+    .workHistory-content p{
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-top: 2%;
+        margin-right: 0.8px;
+    }
+    
+}

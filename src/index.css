@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root{
+  --white: #ffffff;
+  --dark-gray: #252630;
+  --medium-blue: rgb(35, 10, 164);
+  --darker-gray: #1f2235;
+  --ligth-blue: #4564ff;
+}

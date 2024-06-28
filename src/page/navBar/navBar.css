@@ -1,0 +1,113 @@
+/* General styles */
+.nav-container {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5%;
+    background: var(--dark-gray);
+    
+}
+
+.flex {
+    display: none;
+    font-size: 1.6rem;
+    z-index: 1000;
+}
+
+.back {
+    
+    color: #1e38fa;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    text-align: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    
+    z-index: 2;
+}
+
+.my-name {
+    font-size: 2rem;
+    color: var(--white);
+    margin-left: 5%;
+    font-weight: 800;
+}
+
+.nav-list {
+    margin-right: 4%;
+}
+
+.nav-list a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 20px;
+    font-size: 1.2rem;
+}
+
+.nav-list a:hover {
+    color: var(--medium-blue);
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+    .my-name {
+        padding: 5px;
+    }
+
+    .nav-list a {
+        margin: 0 10px;
+    }
+
+    
+}
+
+@media (max-width: 790px) {
+    .nav-container{
+        width: 100%;
+    }
+    .nav-list {
+        display: none;
+    }
+
+    .flex{
+        display: contents;
+        color: var(--white);
+        z-index: 1000;
+    }
+
+    .my-name {
+        padding: 5px;
+        width: 200px;
+    }
+
+    .nav-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #1b1b1b;
+    }
+
+    .nav-flex a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: var(--white);
+        padding: 10px 0;
+        border: 2px solid #7a7a82e5;
+        border-left: 0;
+        border-right: 0;
+        cursor: pointer;
+    }
+
+    .nav-flex a:hover {
+        color: var(--medium-blue);
+    }
+}
