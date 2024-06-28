@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import './aboutMe.css';
 
 const AboutMe = ({ contactRef }) => {
-    const buttonResumeRef = useRef(null);
+    // const buttonResumeRef = useRef(null);
     const buttonHireRef = useRef(null);
 
     const scrollToContact = () => {
@@ -11,38 +11,30 @@ const AboutMe = ({ contactRef }) => {
         }
     }
 
-    const url = '/Felipe-Brito-Resume.pdf';
-    const downloadFileAtURL = (url) => {
-        const fileName = url.split('/').pop();
-        const aTag = document.createElement('a');
-        aTag.href = url;
-        aTag.setAttribute('download', fileName);
-        document.body.appendChild(aTag);
-        aTag.click();
-        document.body.removeChild(aTag);
-    }
-
     useEffect(() => {
-        const buttonResume = buttonResumeRef.current;
+        // const buttonResume = buttonResumeRef.current;
         const buttonHire = buttonHireRef.current;
 
         if (buttonHire) {
             buttonHire.addEventListener('click', scrollToContact);
         }
+        /*
         if (buttonResume) {
             const handleResumeClick = () => downloadFileAtURL(url);
             buttonResume.addEventListener('click', handleResumeClick);
-
-            // Clean up the event listeners
-            return () => {
-                if (buttonHire) {
-                    buttonHire.removeEventListener('click', scrollToContact);
-                }
-                if (buttonResume) {
-                    buttonResume.removeEventListener('click', handleResumeClick);
-                }
-            };
         }
+        */
+        // Clean up the event listeners
+        return () => {
+            if (buttonHire) {
+                buttonHire.removeEventListener('click', scrollToContact);
+            }
+            /*
+            if (buttonResume) {
+                buttonResume.removeEventListener('click', handleResumeClick);
+            }
+            */
+        };
     }, [contactRef]);
 
     return (
@@ -53,6 +45,7 @@ const AboutMe = ({ contactRef }) => {
             </div>
             <div className="about-me-container">
                 <div className="image-container">
+                    {/* You can add your image here */}
                 </div>
                 <div className="about-me-content">
                     <p>
@@ -77,9 +70,9 @@ const AboutMe = ({ contactRef }) => {
                         <button ref={buttonHireRef} className="btn-1 primary-btn-a">
                             Hire Me
                         </button>
-                        <button ref={buttonResumeRef} className="btn-2 highl-btn-a">
+                        <a href="https://drive.google.com/file/d/1ZWIZVcckTNHf0usRQKR_p4IhV0ycXpC8/view?usp=sharing" className="btn-2 highl-btn-a" target="_blank" rel="noopener noreferrer">
                             Get Resume
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
