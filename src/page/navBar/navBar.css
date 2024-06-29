@@ -6,7 +6,6 @@
     align-items: center;
     padding: 1.5%;
     background: var(--dark-gray);
-    
 }
 
 .flex {
@@ -16,16 +15,13 @@
 }
 
 .back {
-    
     color: #1e38fa;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    
     text-align: center;
     font-size: 1.8rem;
     cursor: pointer;
-    
     z-index: 2;
 }
 
@@ -52,6 +48,28 @@
     color: var(--medium-blue);
 }
 
+/* Smooth dropdown styles */
+.nav-flex {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.nav-flex.show {
+    max-height: 220px; /* Adjust this value based on the content */
+}
+
+.nav-flex a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-flex a:hover {
+    background-color: #f1f1f1;
+}
+
 /* Responsive styles */
 @media (max-width: 1000px) {
     .my-name {
@@ -61,19 +79,18 @@
     .nav-list a {
         margin: 0 10px;
     }
-
-    
 }
 
 @media (max-width: 790px) {
-    .nav-container{
+    .nav-container {
         width: 100%;
     }
+
     .nav-list {
         display: none;
     }
 
-    .flex{
+    .flex {
         display: contents;
         color: var(--white);
         z-index: 1000;

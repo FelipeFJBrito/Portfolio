@@ -15,11 +15,10 @@ const NavBar = () => {
             const aboutMeSection = document.getElementById("about");
             if (aboutMeSection) {
                 const rect = aboutMeSection.getBoundingClientRect();
-                // Check if the top of the aboutMeSection is within the viewport
                 if (rect.top < window.innerHeight && rect.bottom >= 0) {
                     setShowBackButton(true);
                 } else if (window.scrollY === 0) {
-                    setShowBackButton(false); 
+                    setShowBackButton(false);
                 }
             }
         };
@@ -46,14 +45,12 @@ const NavBar = () => {
                 </div>
                 <div className="flex" onClick={toggleDropdown}>{list}</div>
             </div>
-            {isDropdownVisible && (
-                <div className="nav-flex">
-                    <a href="#about">About Me</a>
-                    <a href="#resume">Resume</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            )}
+            <div className={`nav-flex ${isDropdownVisible ? 'show' : ''}`}>
+                <a href="#about">About Me</a>
+                <a href="#resume">Resume</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
             {showBackButton && <a href="#nav" className="back">{cUp}</a>}
         </div>
     );

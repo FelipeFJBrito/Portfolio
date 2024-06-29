@@ -89,6 +89,7 @@
 .section-list li {
     margin: 2rem 0;
     cursor: pointer;
+    transition: background-color 0.5s, width 0.5s, padding 0.5s;
 }
 
 .content-list {
@@ -128,6 +129,7 @@
     margin: 1.5rem 0;
     padding: 10px 10px;
     width: 140px;
+    transition: max-height 0.5s ease-out;
 }
 
 @media(max-width:1000px){
@@ -183,10 +185,11 @@
 
     .section-list li.active {
     
-        width: 75px;
-        margin-top: 34px;
+        width: 80px;
+        margin-top: 29px;
     }
 
+    
     .section-list li.active span {
         font-size: 0.58rem;
         
@@ -231,7 +234,7 @@
 
     .section-list li.active span {
         font-size: 0.55rem;
-        
+    
         
     }
 
